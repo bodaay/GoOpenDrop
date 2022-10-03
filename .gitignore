@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+out/
+keys/certificate.pem
+keys/key.pem
+keys/key_noenc.pem
+keys/validation_record.cms
+INBOX/
+OUTBOX/

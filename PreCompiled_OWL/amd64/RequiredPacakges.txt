@@ -1,0 +1,6 @@
+# This Was Compiled on Ubuntu 22.04, Kernel 5.15
+
+
+sudo apt install libpcap0.8 libev4
+
+sudo cp owl /usr/local/bin/

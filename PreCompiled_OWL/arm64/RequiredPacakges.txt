@@ -1,0 +1,5 @@
+# This Was Compiled on Raspberry Pi 400, Raspbian Bulleseye 64 bit
+
+sudo apt install libpcap0.8 libev4
+
+sudo cp owl /usr/local/bin/

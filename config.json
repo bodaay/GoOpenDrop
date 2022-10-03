@@ -1,0 +1,20 @@
+{
+    "inbox_folder":"INBOX",
+    "outbox_folder":"OUTBOX",
+    "owl_wlan_dev_name":"wlx00c0cab1a61f",
+    "owl_channel_6_44_149":"6",
+    "owl_interface_name":"awdl0",
+    "thumbnail_picture_jp2":"fixed_thumbnail.jp2",
+    "ble_device":"hci0",
+    "airdrop_appleid":"bodaay@goopendrop.com",
+    "airdrop_email":"bodaay@goopendrop.com",
+    "airdrop_phone":"97411111111",
+    "airdrop_server_hostname":"GoOpenDrop",
+    "airdrop_server_model":"MacbookPro5.1",
+    "airdrop_server_port":8772,
+    "apple_root_cert":"certs/apple_root_ca.pem",
+    "extracted_certififcate":"keys/certificate.pem",
+    "extracted_certkey":"keys/key_noenc.pem",
+    "extracted_validation_recoed":"keys/validation_record.cms",
+    "os_downloadedfiles_owner":"khalefa"
+}

@@ -3,9 +3,9 @@ a Go Implementation and Enhancement of the Awesome work of seemoo-lab: https://g
 
 
 
-I'll Update this README file
+I'll Update this README file. THIS PROJECT IN Alpha Stage, use it only as POC
 
-just quick info
+
 
 Main features:
 

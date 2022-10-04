@@ -253,7 +253,7 @@ func SendAskAndUpload(receiver *AWDLClientReceiver, ackSuccess *chan *SuccessBat
 			TLSNextProto: map[string]func(string, *tls.Conn) http.RoundTripper{}, //disable http2
 		}
 		client := &http.Client{
-			Timeout:   120 * time.Second,
+			Timeout:   600 * time.Second,
 			Transport: tr,
 		}
 		v6addresss := fmt.Sprintf("https://[%s", receiver.DeviceIP.String()) + "%25" + acr.owlInterfaceName + fmt.Sprintf("]:%d", receiver.DevicePort)
@@ -349,7 +349,7 @@ func sendDiscoverPostREQ(awdlClient *AWDLClient, deviceAddress net.IP, devicePor
 	}
 
 	client := &http.Client{
-		Timeout:   5 * time.Second,
+		Timeout:   60 * time.Second,
 		Transport: tr,
 	}
 

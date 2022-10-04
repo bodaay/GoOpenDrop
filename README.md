@@ -54,7 +54,20 @@ save a contact in the receiving phone with an email matching, then Airdrop will 
 
 Add the local username to set the files owner to, since I still cannot figure out how to run this app properly without sudo permission
 
+Sending/Receving Files:
 
+To Send Files, Create a folder in "OUTBOX" with the device name of the receiver, just drop any files there, they will be sent once the device is discovered.
+
+Receving, GoOpenDrop will accept any file and will create a folder in INBOX with the device name of the sender. You can customize the function in which it will accept or reject:
+
+maing.go
+```
+func checkSender(name string) bool {
+	// ADD INTEGRATION HERE IF NEEDED, You can call your own API server to accept or reject /Ask request //
+	return true // uncomment this to accept from Everyone
+
+}
+```
 Tested On:
 Wifi Module: Alfa AWUS036ACM
 

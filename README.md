@@ -1,5 +1,6 @@
 # GoOpenDrop
-a Go Implementation and Enhancement of the Awesome work of seemoo-lab: https://github.com/seemoo-lab/opendrop
+
+a Go Implementation and Enhancement of the Awesome Open Source AirDrop implementation work of seemoo-lab: https://github.com/seemoo-lab/opendrop
 
 
 

@@ -81,7 +81,7 @@ func main() {
 	receivedAiroDropBeacon := make(chan *ble.ReceivedBLEBeacon)
 	ble.RestartBluetooth()
 	//Initial BLE AirDrop BLE Beacon Broadcasts, we are not leaving until these two are working
-	//Below code for BLE is shit,but kind of stable
+	//Below code for BLE, its really bad, but it works
 	go func() {
 		RequiresRestart := false
 		for {

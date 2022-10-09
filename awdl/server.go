@@ -10,6 +10,7 @@ import (
 	"net"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 
@@ -169,7 +170,8 @@ func (aws *AWDLServer) RegisterServer() {
 	ifaces := make([]net.Interface, 1)
 	ifaces = append(ifaces, aws.owlInterface)
 	aws.serviceID = getRandomServiceID()
-	server, err := zeroconf.RegisterProxy(aws.serviceID, "_airdrop._tcp", "local.", aws.airdropServerPort, aws.airdropDeviceName, []string{aws.owlInterfaceAddress[0].String()[:24]}, []string{"flags=136"}, ifaces)
+	owl_address := strings.Split(aws.owlInterfaceAddress[0].String(), "/")[0]
+	server, err := zeroconf.RegisterProxy(aws.serviceID, "_airdrop._tcp", "local.", aws.airdropServerPort, aws.airdropDeviceName, []string{owl_address}, []string{"flags=136"}, ifaces)
 	if err != nil {
 		log.Error(err)
 	}
@@ -304,7 +306,8 @@ func (aws *AWDLServer) StartWebServer(checkVerify AskVerify, receivedFilleChan c
 
 	})
 	//I want it to be listening only via ipv6 on owl interface
-	v6addresss := fmt.Sprintf("[%s", aws.owlInterfaceAddress[0].String()[:24]) + "%" + aws.owlInterfaceName + fmt.Sprintf("]:%d", aws.airdropServerPort)
+	owl_address := strings.Split(aws.owlInterfaceAddress[0].String(), "/")[0]
+	v6addresss := fmt.Sprintf("[%s", owl_address) + "%" + aws.owlInterfaceName + fmt.Sprintf("]:%d", aws.airdropServerPort)
 	// log.Println(v6addresss)
 	// aws.HttpServer = &http.Server{
 	// 	Addr:    v6addresss,

@@ -35,11 +35,13 @@ https://github.com/seemoo-lab/owl
 You must Do the extraction Step of Keys, this will give the ability to have a verified contact (accept from contact in airdrop settings, and it will show a fixed thumbnail image of type JPEG2000)
 
 
-Extracted Keys you can put them in "Keys" Folder
+Extracted Keys you can put them in "Keys" Folder, and run the script: RemovePassphraseKey.sh to remove the passphrase
 
 Follow this rpeo for extraction:
 
 https://github.com/seemoo-lab/airdrop-keychain-extractor
+
+
 
 
 Verified /Ask Request:
@@ -70,7 +72,10 @@ func checkSender(name string) bool {
 }
 ```
 Tested On:
-Wifi Module: Alfa AWUS036ACM
+Wifi Module: Alfa AWUS036ACM, Linksys AE6000
+
+Hardware:
+Raspberry Pi 400
 
 For compatible Wifi Modules with Active Monitoring, check this awesome shortlist:
 

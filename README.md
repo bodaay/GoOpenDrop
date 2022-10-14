@@ -7,11 +7,16 @@
 
 ### Features:
 
-######- Support Sending/Receiving Multiple Files. Photos/videos are sent as one request, and any other file of the same Apple UType will be sent together
-######- Support for BLE 5.0, using BLUEZ with d-bus interface
-######- Handling all BLE related work, by sending proper Airdrop beacon to intiate Airdrop on Mobiles side, and by capturing BLE beacons to start advertising Zeronconf Service
-######- Pure Go CPIO Archive implementation written for this project, with auto detection of GZipped CPIO
-######- Easy Customization and Integration, All Core Requried functionality in one file with a **INTEGRATION POINT** Tag
+###### - Support Sending/Receiving Multiple Files. Photos/videos are sent as one request, and any other file of the same Apple UType will be sent together
+
+###### - Support for BLE 5.0, using BLUEZ with d-bus interface
+
+###### - Handling all BLE related work, by sending proper Airdrop beacon to intiate Airdrop on Mobiles side, and by capturing BLE beacons to start advertising Zeronconf Service
+
+###### - Pure Go CPIO Archive implementation written for this project, with auto detection of GZipped CPIO
+
+###### - Easy Customization and Integration, All Core Requried functionality in one file with a **INTEGRATION POINT** Tag
+
 <br/>
 
 ### Required APT Packages:

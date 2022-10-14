@@ -15,7 +15,7 @@
 
 ###### - Pure Go CPIO Archive implementation written for this project, with auto detection of GZipped CPIO
 
-###### - Easy Customization and Integration, All Core Requried functionality in one file with a **INTEGRATION POINT** Tag
+###### - Easy Customization and Integration, All Core Requried functionality in one file with a **"INTEGRATION POINT"** Comment Tag
 
 <br/>
 

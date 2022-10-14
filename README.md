@@ -57,7 +57,7 @@ https://github.com/seemoo-lab/airdrop-keychain-extractor
 
 <br/>
 
-#### GoOpenDrop Configuration
+### GoOpenDrop Configuration
 
 At the moment, GoOpenDrop Just use a simple json file for configurations
 
@@ -127,7 +127,7 @@ sudo ./goopendrop
 
 * GoOpenDrop Require Running as Root, will try to fix this as soon as I find the correct capabilities to give the binary, or find a better solution to restart BLE and wlan interfaces
 * Client Verification, GoOpenDrop Does not verify the client sending the files, this can easily be fixed by writing a custom TLS verification function, which will extract client details and verify it with received apple signature in received validation record
-* since GoOpenDrop currently requires running as root, a client can use malicious device name, or malicious  
+* since GoOpenDrop currently requires running as root, a client can use malicious device name, or malicious cpio archive and escape path or overwrite system files
 
 ### Tested Wifi Module :
 * Alfa AWUS036ACM

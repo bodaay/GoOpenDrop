@@ -5,7 +5,7 @@ type AppConfig struct {
 	OutboxFolder              string `json:"outbox_folder"`
 	OwlWlanDeviceName         string `json:"owl_wlan_dev_name"`
 	OwlChannel                string `json:"owl_channel_6_44_149"`
-	OwlInterfaceName          string `json:"owl_interface_name"`
+	AWDLInterfaceName         string `json:"awdl_interface_name"`
 	ThumbnalJP2               string `json:"thumbnail_picture_jp2"`
 	BLEDevice                 string `json:"ble_device"`
 	AirdropAppleID            string `json:"airdrop_appleid"`

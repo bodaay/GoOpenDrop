@@ -1,9 +1,10 @@
 {
     "inbox_folder":"INBOX",
     "outbox_folder":"OUTBOX",
-    "owl_wlan_dev_name":"wlx00c0cab1a61f",
+    "owl_wlan_dev_name":"wlan1",
     "owl_channel_6_44_149":"6",
-    "owl_interface_name":"awdl0",
+    "os_downloadedfiles_owner":"khalefa",
+    "awdl_interface_name":"awdl0",
     "thumbnail_picture_jp2":"fixed_thumbnail.jp2",
     "ble_device":"hci0",
     "airdrop_appleid":"bodaay@goopendrop.com",
@@ -15,6 +16,6 @@
     "apple_root_cert":"certs/apple_root_ca.pem",
     "extracted_certififcate":"keys/certificate.pem",
     "extracted_certkey":"keys/key_noenc.pem",
-    "extracted_validation_recoed":"keys/validation_record.cms",
-    "os_downloadedfiles_owner":"khalefa"
+    "extracted_validation_recoed":"keys/validation_record.cms"
+    
 }

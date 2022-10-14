@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir -p out/keys
-mkdir -p out/certs
-cp keys/* out/keys/
-cp certs/* out/certs/
-cp config.json fixed_thumbnail.jp2 out/
+mkdir -p out/amd64/keys
+mkdir -p out/amd64/certs
+cp keys/* out/amd64/keys/
+cp certs/* out/amd64/certs/
+cp config.json fixed_thumbnail.jp2 out/amd64/
 GOOS=linux GOARCH=amd64 go build -o out/amd64/goopendrop .

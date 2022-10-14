@@ -120,7 +120,7 @@ At the moment, since GoOpenDrop restart BLE interface, wlan interface, it requir
 
 run GoOpenDrop compiled
 ```
-sudo ./goopendrop
+sudo ./goopendrop ./config.json
 ```
 
 ### Issues/Limitations and security

@@ -56,6 +56,7 @@ https://github.com/seemoo-lab/airdrop-keychain-extractor
 <img src="verified.png" width="30%" height="30%"></img>
 
 <br/>
+
 #### GoOpenDrop Configuration
 
 At the moment, GoOpenDrop Just use a simple json file for configurations

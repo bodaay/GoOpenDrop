@@ -4,7 +4,8 @@
 
 ####a Go Implementation and Enhancement of the Awesome Open Source AirDrop implementation work of seemoo-lab [openairdrop](https://github.com/seemoo-lab/opendrop)
 <br/>
-###Features:
+
+### Features:
 
 ######- Support Sending/Receiving Multiple Files. Photos/videos are sent as one request, and any other file of the same Apple UType will be sent together
 ######- Support for BLE 5.0, using BLUEZ with d-bus interface
@@ -12,20 +13,25 @@
 ######- Pure Go CPIO Archive implementation written for this project, with auto detection of GZipped CPIO
 ######- Easy Customization and Integration, All Core Requried functionality in one file with a **INTEGRATION POINT** Tag
 <br/>
-###Required APT Packages:
-######These the packages required on a Debian based OS
+
+### Required APT Packages:
+
+###### These the packages required on a Debian based OS
 ```
 sudo apt install libpcap0.8 libev4 bluez
 ```
-###Required OWL Binaries:
+
+### Required OWL Binaries:
+
 I've included seemoo-lab Compiled OWL Binaries, you can use it, or build it from source:
 https://github.com/seemoo-lab/owl
 <br/>
-###Extraction of Apple Keys:
+
+### Extraction of Apple Keys:
 
 You **MUST** do the extraction Step of Keys, GoOpenDrop will not generate self signed certificates.
 
-#####Extraction of the keys benefits:
+##### Extraction of the keys benefits:
 - this will give the ability to have a verified contact (accept from contact in airdrop settings, and it will show a fixed thumbnail image of type JPEG2000)
 
 - Mobile Configured with Airdrop: Contacts Only Mode, will still accept files from GoOpenDrop
@@ -40,12 +46,12 @@ Follow this repo for extraction:
 https://github.com/seemoo-lab/airdrop-keychain-extractor
 
 
-#####Example of a verified /Ask post Request:
+##### Example of a verified /Ask post Request:
 
 <img src="verified.png" width="30%" height="30%"></img>
 
 <br/>
-####GoOpenDrop Configuration
+#### GoOpenDrop Configuration
 
 At the moment, GoOpenDrop Just use a simple json file for configurations
 
@@ -71,13 +77,14 @@ At the moment, GoOpenDrop Just use a simple json file for configurations
 | extracted_validation_recoed 	| string 	| keys/validation_record.cms 	| Extracted Validation Record                                                                               	|
 
 <br/>
-###Sending/Receving Files:
+
+### Sending/Receving Files:
 
 To Send Files, Create a folder in "OUTBOX" with the device name of the receiver, just drop any files there, they will be sent once the device is discovered.
 
 Receiving, GoOpenDrop will accept any file and will create a folder in INBOX with the device name of the sender. You can customize this functionality by modifying the file:
 
-######main.go
+###### main.go
 ```
 func checkSender(name string) bool {
 	// INTEGRATION POINT
@@ -87,7 +94,7 @@ func checkSender(name string) bool {
 }
 ```
 
-###Build
+### Build
 
 To build simply run the scripts:
 ```
@@ -101,7 +108,7 @@ Or
 The build scripts will copy all required files along with the binary
 to **out** folder
 
-###Running
+### Running
 
 At the moment, since GoOpenDrop restart BLE interface, wlan interface, it requires to run as Root. 
 
@@ -110,7 +117,7 @@ run GoOpenDrop compiled
 sudo ./goopendrop
 ```
 
-###Issues/Limitations and security
+### Issues/Limitations and security
 
 * GoOpenDrop Require Running as Root, will try to fix this as soon as I find the correct capabilities to give the binary, or find a better solution to restart BLE and wlan interfaces
 * Client Verification, GoOpenDrop Does not verify the client sending the files, this can easily be fixed by writing a custom TLS verification function, which will extract client details and verify it with received apple signature in received validation record
@@ -119,7 +126,7 @@ sudo ./goopendrop
 * Alfa AWUS036ACM
 * Linksys AE6000
 
-###Tested Hardware/os:
+### Tested Hardware/os:
 * Any PC running Ubuntu 22.04 with bluetooth module and one of the listed wifi modules
 * Raspberry Pi 400/Raspberry Pi OS Lite
 

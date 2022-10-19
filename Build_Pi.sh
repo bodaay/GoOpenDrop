@@ -15,5 +15,11 @@ cp config.json fixed_thumbnail.jp2 out/arm/
 #CGO_ENABLED=1 CC=aarch64-linux-gnu-gcc GOARM=7 GOOS=linux GOARCH=arm64  go build -o out/arm64//goopendrop .
 #CGO_ENABLED=1 CC=arm-linux-gnueabihf-gcc GOARM=7 GOOS=linux GOARCH=arm  go build -o out/arm/goopendrop .
 
-GOARM=7 GOOS=linux GOARCH=arm64  go build -o out/arm64//goopendrop .
-GOARM=7 GOOS=linux GOARCH=arm  go build -o out/arm/goopendrop .
+if [ `getconf LONG_BIT` = "32" ]
+then
+    GOARM=5 GOOS=linux GOARCH=arm64  go build -o out/arm64//goopendrop .
+    GOARM=5 GOOS=linux GOARCH=arm  go build -o out/arm/goopendrop .
+else
+    GOARM=7 GOOS=linux GOARCH=arm64  go build -o out/arm64//goopendrop .
+    GOARM=7 GOOS=linux GOARCH=arm  go build -o out/arm/goopendrop .
+fi

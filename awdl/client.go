@@ -143,7 +143,7 @@ func (ac *AWDLClient) StartDiscovery(receiveCH *chan *AWDLClientReceiver) {
 				if entry.HostName == ac.airdropDeviceName+".local." { //no need to discover ourselfs. better to do this with ip, but for some reason I'm doing something wrong
 					return
 				}
-				logger.Infof("Fouod New Device with ip: %s and hostname: %s, Trying to Discover it...", entry.AddrIPv6[0].String(), entry.HostName)
+				logger.Infof("Found New Device with ip: %s and hostname: %s, Trying to Discover it...", entry.AddrIPv6[0].String(), entry.HostName)
 				err := sendDiscoverPostREQ(ac, entry.AddrIPv6[0], entry.Port, receiveCH, ac)
 				if err != nil {
 					logger.Error(err)
